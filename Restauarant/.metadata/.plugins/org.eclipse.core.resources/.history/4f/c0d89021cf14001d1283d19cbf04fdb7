@@ -1,0 +1,12 @@
+package RestaurantProject.spring.Reposetory;
+
+import org.springframework.data.repository.CrudRepository;
+
+
+import RestaurantProject.spring.Entities.Reclam;
+
+
+
+public interface ReclamRepository  extends  CrudRepository<Reclam, Integer>{
+
+}

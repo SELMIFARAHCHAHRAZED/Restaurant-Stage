@@ -1,0 +1,33 @@
+package RestaurantProject.spring.Entities;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
+public class Reclam {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+private int  idRec; 
+private String typeRec;
+private String nomU;
+private String prenomU;
+private String emailU;   
+private String DescriptionRec;
+private String etatRec;
+public Reclam() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Reclam(int idRec, String typeRec, String nomU, String prenomU, String emailU, String descriptionRec,
+		String etatRec) {
+	super();
+	this.idRec = idRec;
+	this.typeRec = typeRec;
+	this.nomU = nomU;
+	this.prenomU = prenomU;
+	this.emailU = emailU;
+	 this.DescriptionRec = descriptionRec;
+	this.etatRec = etatRec;
+}
+
+}

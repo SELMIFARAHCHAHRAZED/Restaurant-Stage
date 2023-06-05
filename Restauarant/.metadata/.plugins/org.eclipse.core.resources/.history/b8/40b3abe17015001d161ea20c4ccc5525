@@ -1,0 +1,56 @@
+package RestaurantProject.spring.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Services.CommandeServices;
+
+@RestController
+public class CommandeController {
+	@Autowired
+	CommandeServices comser;
+	@PostMapping("/addcommande")
+	public Commande addC(@RequestBody Commande c)
+	{
+		return comser.addC(c);
+	}
+	@PostMapping("/addListCommande")
+	   public List<Commande> addlisteCommande( @RequestBody List<Commande> lc){
+		return comser.addlisteCommande(lc);
+	}
+	
+	
+	@PostMapping("/updatecommande/{idC}")
+	   public Commande updateCommande(@RequestBody Commande c,  @PathVariable("idC") Integer idC) {
+		return comser.updateCommande(c,idC);
+		   
+	   }
+	
+	
+	 @DeleteMapping("/deletecommande")
+	public void deleteCommande(Integer idC) {
+		comser.deleteCommande(idC);
+	}
+	 
+	 @GetMapping("/gettallcommandes")
+	   public List<Commande> getAllCommande(){
+		return comser.getAllCommande();
+	   }
+	 
+	 @GetMapping("/getcommandebyetat/{ch}")
+	   public List<Commande> getCommandeByEtatc( @PathVariable String ch ){
+		   return comser.getCommandeByEtat(ch);
+	   };
+	 
+	 
+	 
+}

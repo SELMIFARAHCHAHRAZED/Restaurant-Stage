@@ -1,0 +1,57 @@
+package RestaurantProject.spring.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Reposetory.CommandeRepository;
+
+@RestController
+public class CommandeController {
+	@Autowired
+	CommandeRepository comrep; 
+	
+	
+	@PostMapping("/addCommande")
+	public Commande addU( @RequestBody Commande c) {
+		  return null;
+	}
+  /* @PostMapping("/addListuser")
+   public List<Commande> addlisteUser( @RequestBody List<Commande> lu){
+	return ur.addlisteUser(lu);
+	      
+}
+   @PostMapping("/adduserwithtestEmail")
+   public String addUserTestEmail( @RequestBody Commande u) {
+	return ur.addUserTestEmail(u);
+	   
+   }
+   @PostMapping("/updateuser/{idU}")
+   public Commande updateUser(@RequestBody Commande u,  @PathVariable("idU") Integer idU) {
+	return ur.updateUser(u, idU);
+	   
+   }
+   @DeleteMapping("/deleteuser")
+   public void deleteUser(@Param("idU") Integer  idU) {
+	   ur.deleteUser(idU);
+   }
+   @GetMapping("/gettallusers")
+   public List<Commande> getAllUser(){
+	return ur.getAllUser();
+   }
+   @GetMapping("/getuserbynom/{ch}")
+   public List<Commande> getUserByNom( @PathVariable String ch ){
+	   return ur.getUserByNom(ch);
+   }
+	*/
+	
+	
+}

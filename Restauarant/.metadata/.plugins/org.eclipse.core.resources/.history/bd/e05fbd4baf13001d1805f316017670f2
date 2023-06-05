@@ -1,0 +1,72 @@
+package RestaurantProject.spring.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Commande {
+  @Id
+  private int idCommande; 
+  private String etatC; 
+  private String nomU; 
+  private String prenomU; 
+  private String livraison; 
+  private float  prixC;
+public Commande() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Commande(int idCommande, String etatC, String nomU, String prenomU, String livraison, float prixC) {
+	super();
+	this.idCommande = idCommande;
+	this.etatC = etatC;
+	this.nomU = nomU;
+	this.prenomU = prenomU;
+	this.livraison = livraison;
+	this.prixC = prixC;
+}
+public int getIdCommande() {
+	return idCommande;
+}
+public void setIdCommande(int idCommande) {
+	this.idCommande = idCommande;
+}
+public String getEtatC() {
+	return etatC;
+}
+public void setEtatC(String etatC) {
+	this.etatC = etatC;
+}
+public String getNomU() {
+	return nomU;
+}
+public void setNomU(String nomU) {
+	this.nomU = nomU;
+}
+public String getPrenomU() {
+	return prenomU;
+}
+public void setPrenomU(String prenomU) {
+	this.prenomU = prenomU;
+}
+public String getLivraison() {
+	return livraison;
+}
+public void setLivraison(String livraison) {
+	this.livraison = livraison;
+}
+public float getPrixC() {
+	return prixC;
+}
+public void setPrixC(float prixC) {
+	this.prixC = prixC;
+}
+@Override
+public String toString() {
+	return "Commande [idCommande=" + idCommande + ", etatC=" + etatC + ", nomU=" + nomU + ", prenomU=" + prenomU
+			+ ", livraison=" + livraison + ", prixC=" + prixC + "]";
+} 
+  
+	
+	
+}

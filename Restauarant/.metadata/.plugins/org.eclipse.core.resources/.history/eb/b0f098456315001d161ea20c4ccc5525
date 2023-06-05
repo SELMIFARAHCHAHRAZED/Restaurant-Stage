@@ -1,0 +1,17 @@
+package RestaurantProject.spring.Reposetory;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+
+
+import RestaurantProject.spring.Entities.Reservation;
+import RestaurantProject.spring.Entities.Utilisateur;
+
+
+public interface ReservationRepository extends  CrudRepository<Reservation, Integer>{
+	@Query(value=("select * from Reservation  u where u.nomU like :cle"),nativeQuery = true)
+    List<Utilisateur> ListUsers(@Param("cle") String nom);
+}

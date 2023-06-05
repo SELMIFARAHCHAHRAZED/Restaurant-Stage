@@ -1,0 +1,59 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Plat;
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Reposetory.PlatRepository;
+
+@Service
+public class PlatServices  implements IPlatServices{
+	@Autowired
+	 PlatRepository pr;
+	@Override
+	public Plat addPlat(Plat p) {
+		
+		return pr.save(p);
+	}
+	@Override
+	public List<Plat> addlistePlat(List<Plat> lp) {
+		// TODO Auto-generated method stub
+		return (List<Plat>) pr.saveAll(lp);
+	}
+	@Override
+	public String addPLatTestNomP(Plat p) {
+		// TODO Auto-generated method stub
+		String ch="";
+		if( pr.existsByNomP(p.getNomP()))
+		{
+			ch="plat exixte deja !!!!";
+		}
+		else {
+			pr.save(p);
+			ch="plat ajoutée";
+		}
+		return ch;
+	}
+	@Override
+	public Plat updatePlat(Plat p, Integer idP) {
+		// TODO Auto-generated method stub
+		Plat plat= pr.findById(idP).get(); 
+		plat.setDescriptionP(p.getDescriptionP());
+		plat.setNomP(p.getNomP());
+		plat.setPrixP(p.getPrixP());
+		plat.setImageP(p.getImageP());
+		pr.save(plat);
+		return plat;
+	}
+	@Override
+	public void deletePlat(Integer idP) {
+		// TODO Auto-generated method stub
+	      pr.deleteById(idP);
+	}
+
+	
+
+}

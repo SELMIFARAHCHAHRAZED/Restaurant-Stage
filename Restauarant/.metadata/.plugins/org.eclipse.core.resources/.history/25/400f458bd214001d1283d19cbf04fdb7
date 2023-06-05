@@ -1,0 +1,6 @@
+package RestaurantProject.spring.Services;
+
+
+public interface IReservationServices {
+
+}

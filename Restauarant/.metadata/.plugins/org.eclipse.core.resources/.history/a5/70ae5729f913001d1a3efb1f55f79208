@@ -1,0 +1,10 @@
+package RestaurantProject.spring.Reposetory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import RestaurantProject.spring.Entities.Utilisateur;
+
+public interface UtilisateurRepository extends CrudRepository<Utilisateur, Integer> {
+    
+	Boolean existsByEmail(String email);
+}

@@ -1,0 +1,59 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Reclam;
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Reposetory.ReclamRepository;
+
+@Service
+public class ReclamServices  implements IReclamServices{
+
+	
+@Autowired
+ReclamRepository recrep;
+
+@Override
+public Reclam addReclam(Reclam r) {
+	// TODO Auto-generated method stub
+	return recrep.save(r);
+}
+/*
+@Override
+public List<Reclam> addlisteReclam(List<Reclam> lrec) {
+	// TODO Auto-generated method stub
+	return  (List<Reclam>) recrep.saveAll(lrec);
+}
+
+@Override
+public Reclam updateReclam(Reclam rec, Integer idRec) {
+	// TODO Auto-generated method stub
+	Reclam reclam= recrep.findById(idRec).get(); 
+	//reclam.setTypeRec(rec.getTypeRec());
+	recrep.save(reclam);
+	return reclam;
+}
+
+@Override
+public void deleteReclam(Integer idRec) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public List<Reclam> getAllReclam() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public List<Reclam> getUserByType(String ch) {
+	// TODO Auto-generated method stub
+	return null;
+}*/
+
+
+}

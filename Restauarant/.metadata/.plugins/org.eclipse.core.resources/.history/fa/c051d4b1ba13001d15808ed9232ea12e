@@ -1,0 +1,15 @@
+package RestaurantProject.spring.Services;
+
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Utilisateur;
+@
+public class UtilisateurServices implements IUtilisateurServices {
+
+	@Override
+	public Utilisateur addU(Utilisateur u) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

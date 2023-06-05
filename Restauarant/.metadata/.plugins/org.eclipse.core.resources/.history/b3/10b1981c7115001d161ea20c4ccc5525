@@ -1,0 +1,102 @@
+package RestaurantProject.spring.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
+public class Commande {
+	 @Id
+	 @GeneratedValue(strategy=GenerationType.IDENTITY)
+	 private int idCommande; 
+	 private String etatC;
+	 private String livraison; 
+	 private String modePayement;
+	  private String nomPlat;
+	  private String nomU; 
+	  private String prenomU; 
+	  private float  prixC;
+	  private int qte;
+	public Commande() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Commande(int idCommande, String etatC, String livraison, String modePayement, String nomPlat, String nomU,
+			String prenomU, float prixC, int qte) {
+		super();
+		this.idCommande = idCommande;
+		this.etatC = etatC;
+		this.livraison = livraison;
+		this.modePayement = modePayement;
+		this.nomPlat = nomPlat;
+		this.nomU = nomU;
+		this.prenomU = prenomU;
+		this.prixC = prixC;
+		this.qte = qte;
+	}
+	public int getIdCommande() {
+		return idCommande;
+	}
+	public void setIdCommande(int idCommande) {
+		this.idCommande = idCommande;
+	}
+	public String getEtatC() {
+		return etatC;
+	}
+	public void setEtatC(String etatC) {
+		this.etatC = etatC;
+	}
+	public String getLivraison() {
+		return livraison;
+	}
+	public void setLivraison(String livraison) {
+		this.livraison = livraison;
+	}
+	public String getModePayement() {
+		return modePayement;
+	}
+	public void setModePayement(String modePayement) {
+		this.modePayement = modePayement;
+	}
+	public String getNomPlat() {
+		return nomPlat;
+	}
+	public void setNomPlat(String nomPlat) {
+		this.nomPlat = nomPlat;
+	}
+	public String getNomU() {
+		return nomU;
+	}
+	public void setNomU(String nomU) {
+		this.nomU = nomU;
+	}
+	public String getPrenomU() {
+		return prenomU;
+	}
+	public void setPrenomU(String prenomU) {
+		this.prenomU = prenomU;
+	}
+	public float getPrixC() {
+		return prixC;
+	}
+	public void setPrixC(float prixC) {
+		this.prixC = prixC;
+	}
+	public int getQte() {
+		return qte;
+	}
+	public void setQte(int qte) {
+		this.qte = qte;
+	}
+	@Override
+	public String toString() {
+		return "Commande [idCommande=" + idCommande + ", etatC=" + etatC + ", livraison=" + livraison
+				+ ", modePayement=" + modePayement + ", nomPlat=" + nomPlat + ", nomU=" + nomU + ", prenomU=" + prenomU
+				+ ", prixC=" + prixC + ", qte=" + qte + "]";
+	} 
+	  
+	  
+	  
+	  
+	  
+}

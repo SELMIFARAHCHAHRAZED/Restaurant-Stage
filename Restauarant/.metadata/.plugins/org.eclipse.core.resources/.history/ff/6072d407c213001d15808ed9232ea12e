@@ -1,0 +1,18 @@
+package RestaurantProject.spring.Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Reposetory.UtilisateurRepository;
+@Service
+public class UtilisateurServices implements IUtilisateurServices {
+ @Autowired
+ UtilisateurRepository ur; 
+	@Override
+	public Utilisateur addU(Utilisateur u) {
+		// TODO Auto-generated method stub
+		return ur.save(u) ;
+	}
+
+}

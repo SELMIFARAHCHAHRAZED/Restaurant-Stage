@@ -1,0 +1,5 @@
+package RestaurantProject.spring.Reposetory;
+
+public interface ReservationRepository {
+
+}

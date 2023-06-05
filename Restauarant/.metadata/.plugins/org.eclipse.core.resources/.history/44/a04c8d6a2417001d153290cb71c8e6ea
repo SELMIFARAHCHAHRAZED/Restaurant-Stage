@@ -1,0 +1,10 @@
+package RestaurantProject.spring.Reposetory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Entities.Employer;
+
+public interface EmployerRepository  extends CrudRepository<Employer, Integer>{
+	Boolean existsByTelephonep(int telephonep);
+}

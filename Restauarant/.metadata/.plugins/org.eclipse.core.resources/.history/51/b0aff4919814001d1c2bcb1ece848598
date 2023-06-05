@@ -1,0 +1,19 @@
+package RestaurantProject.spring.Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Reposetory.CommandeRepository;
+
+@Service
+public class CommandeServices {
+	@Autowired
+	CommandeRepository comrep;
+
+	
+
+	
+
+}

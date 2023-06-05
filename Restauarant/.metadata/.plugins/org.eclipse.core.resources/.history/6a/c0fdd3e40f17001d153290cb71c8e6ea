@@ -1,0 +1,32 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Entities.Employer;
+import RestaurantProject.spring.Reposetory.EmployerRepository;
+ @Service
+public class EmployerServices implements IEmployerServices {
+
+	 @Autowired
+	 EmployerRepository emprep; 
+	 @Override
+	public Employer addEm(Employer e) {
+		// TODO Auto-generated method stub
+		return emprep.save(e) ;
+	}
+	@Override
+	public List<Employer> addlisteEmp(List<Employer> lem) {
+		// TODO Auto-generated method stub
+		 return (List<Employer>)emprep.saveAll(lem);
+	}
+	@Override
+	public String addEmpTestTel(Employer emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

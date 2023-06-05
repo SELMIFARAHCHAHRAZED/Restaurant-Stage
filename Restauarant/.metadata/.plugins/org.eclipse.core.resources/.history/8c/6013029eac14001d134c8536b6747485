@@ -1,0 +1,18 @@
+package RestaurantProject.spring.Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Reposetory.CommandeRepository;
+
+public class CommandeServices  implements ICommandeServices{
+  @Autowired
+  CommandeRepository comrep; 
+	@Override
+	public Commande addC(Commande c) {
+		// TODO Auto-generated method stub
+		return comrep.save(c);
+	}
+	
+
+}

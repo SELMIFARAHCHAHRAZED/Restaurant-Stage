@@ -1,0 +1,48 @@
+package RestaurantProject.spring.Controller;
+
+import java.util.List;
+
+import javax.websocket.server.PathParam;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Services.UtilisateurServices;
+
+@RestController
+public class UtilisateurController {
+	
+	
+	@Autowired
+	UtilisateurServices ur; 
+   @PostMapping("/adduser")
+	public Utilisateur addU( @RequestBody Utilisateur u) {
+		  return ur.addU(u);
+	}
+   @PostMapping("/addListuser")
+   public List<Utilisateur> addlisteUser( @RequestBody List<Utilisateur> lu){
+	return ur.addlisteUser(lu);
+	      
+}
+   @PostMapping("/adduserwithtestEmail")
+   public String addUserTestEmail( @RequestBody Utilisateur u) {
+	return ur.addUserTestEmail(u);
+	   
+   }
+   @PostMapping("/updateuser/{idU}")
+   public Utilisateur updateUser(@RequestBody Utilisateur u,  @PathVariable("idU") Integer idU) {
+	return ur.updateUser(u, idU);
+	   
+   }
+   @DeleteMapping("/deleteuser")
+   public void deleteUser( @PathParam(value = "idU") Integer  idU) {
+	   ur.deleteUser(idU);
+   }
+}

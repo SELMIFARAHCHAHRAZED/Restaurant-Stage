@@ -1,0 +1,5 @@
+package RestaurantProject.spring.Entities;
+
+public class Employer {
+
+}

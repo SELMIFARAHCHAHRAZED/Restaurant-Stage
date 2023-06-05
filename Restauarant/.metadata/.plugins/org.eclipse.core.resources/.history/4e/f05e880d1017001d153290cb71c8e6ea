@@ -1,0 +1,30 @@
+package RestaurantProject.spring.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Entities.Employer;
+import RestaurantProject.spring.Entities.Plat;
+import RestaurantProject.spring.Services.EmployerServices;
+
+@RestController
+public class EmployerController {
+
+	@Autowired
+	EmployerServices emSer;
+	
+	@PostMapping("/addEmployer")
+	public Employer addEmp(@RequestBody Employer e) {
+		  return emSer.addEm(e);
+	}
+	
+	@PostMapping("/addListEmployer")
+	   public List<Employer> addlisteEmployer( @RequestBody List<Employer> lem){
+		return emSer.addlisteEmp(lem);
+	}
+}

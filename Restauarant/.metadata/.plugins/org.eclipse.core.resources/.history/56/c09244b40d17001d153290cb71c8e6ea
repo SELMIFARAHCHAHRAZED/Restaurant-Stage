@@ -1,0 +1,21 @@
+package RestaurantProject.spring.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Employer {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int idEmp;
+	 private String nomEm; 
+	private String prenomEmp; 
+	private String adresseEmp; 
+	private String picEmp; 
+	private String jobEm; 
+	private float salaire;
+	private int telephonep;
+	
+}

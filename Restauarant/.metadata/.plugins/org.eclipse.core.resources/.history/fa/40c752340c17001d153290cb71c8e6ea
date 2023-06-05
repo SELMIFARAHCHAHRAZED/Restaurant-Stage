@@ -1,0 +1,93 @@
+package RestaurantProject.spring.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Employer {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private  int idEm;
+	private String nomEm; 
+	private String prenomEmp; 
+	private String adresseEmp; 
+	private String picEmp; 
+	private String jobEm; 
+	private float salaire;
+	private int telephonep;
+	public Employer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Employer(int idEm, String nomEm, String prenomEmp, String adrpesseEmp, String picEmp, String jobEm,
+			float salaire, int telephonep) {
+		super();
+		this.idEm = idEm;
+		this.nomEm = nomEm;
+		this.prenomEmp = prenomEmp;
+		this.adrpesseEmp = adrpesseEmp;
+		this.picEmp = picEmp;
+		this.jobEm = jobEm;
+		this.salaire = salaire;
+		this.telephonep = telephonep;
+	}
+	public int getIdEm() {
+		return idEm;
+	}
+	public void setIdEm(int idEm) {
+		this.idEm = idEm;
+	}
+	public String getNomEm() {
+		return nomEm;
+	}
+	public void setNomEm(String nomEm) {
+		this.nomEm = nomEm;
+	}
+	public String getPrenomEmp() {
+		return prenomEmp;
+	}
+	public void setPrenomEmp(String prenomEmp) {
+		this.prenomEmp = prenomEmp;
+	}
+	public String getAdrpesseEmp() {
+		return adrpesseEmp;
+	}
+	public void setAdrpesseEmp(String adrpesseEmp) {
+		this.adrpesseEmp = adrpesseEmp;
+	}
+	public String getPicEmp() {
+		return picEmp;
+	}
+	public void setPicEmp(String picEmp) {
+		this.picEmp = picEmp;
+	}
+	public String getJobEm() {
+		return jobEm;
+	}
+	public void setJobEm(String jobEm) {
+		this.jobEm = jobEm;
+	}
+	public float getSalaire() {
+		return salaire;
+	}
+	public void setSalaire(float salaire) {
+		this.salaire = salaire;
+	}
+	public int getTelephonep() {
+		return telephonep;
+	}
+	public void setTelephonep(int telephonep) {
+		this.telephonep = telephonep;
+	}
+	@Override
+	public String toString() {
+		return "Employer [idEm=" + idEm + ", nomEm=" + nomEm + ", prenomEmp=" + prenomEmp + ", adrpesseEmp="
+				+ adrpesseEmp + ", picEmp=" + picEmp + ", jobEm=" + jobEm + ", salaire=" + salaire + ", telephonep="
+				+ telephonep + "]";
+	} 
+	
+	
+	
+}

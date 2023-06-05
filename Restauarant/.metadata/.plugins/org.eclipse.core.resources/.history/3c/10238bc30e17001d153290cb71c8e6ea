@@ -1,0 +1,12 @@
+package RestaurantProject.spring.Services;
+
+
+import java.util.List;
+
+import RestaurantProject.spring.Entities.Employer;
+import RestaurantProject.spring.Entities.Plat;
+
+public interface IEmployerServices {
+	public Employer addEm(Employer e);
+	public List<Employer>addlisteEmp(List<Employer>lem);
+}

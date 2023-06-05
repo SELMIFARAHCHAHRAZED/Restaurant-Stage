@@ -1,0 +1,29 @@
+package RestaurantProject.spring.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Reclam;
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Services.ReclamServices;
+
+@RestController
+public class ReclamController {
+	@Autowired
+	ReclamServices recServ; 
+	@PostMapping("/addreclam")
+	public Reclam addRec(Reclam r)
+	{
+		return recServ.addReclam(r);
+	}
+	
+	 @PostMapping("/addListreclam")
+	   public List<Reclam> addlisteReclam( @RequestBody List<Reclam> lrec){
+		return recServ.addlisteReclam(lrec);
+		      
+	}
+}

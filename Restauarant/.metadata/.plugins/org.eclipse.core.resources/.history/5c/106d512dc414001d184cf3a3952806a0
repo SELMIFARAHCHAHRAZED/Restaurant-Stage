@@ -1,0 +1,7 @@
+package RestaurantProject.spring.Services;
+
+import RestaurantProject.spring.Entities.Reclam;
+
+public interface IReclamServices {
+	public Reclam addReclam(Reclam r);
+}

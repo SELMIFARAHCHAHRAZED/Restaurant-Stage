@@ -1,0 +1,20 @@
+package RestaurantProject.spring.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Plat;
+import RestaurantProject.spring.Entities.Reclam;
+import RestaurantProject.spring.Reposetory.ReclamRepository;
+
+@RestController
+public class ReclamController {
+@Autowired
+ReclamRepository recrep; 
+
+public Reclam addReclam( @RequestBody Reclam r) {
+	  return null;
+}
+
+}

@@ -1,0 +1,25 @@
+package RestaurantProject.spring.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
+public class Commande {
+	 @Id
+	 @GeneratedValue(strategy=GenerationType.IDENTITY)
+	 private int idCommande; 
+	 private String etatC;
+	 private String livraison; 
+	 private String modePayement;
+	  private String nomPlat;
+	  private String nomU; 
+	  private String prenomU; 
+	  private float  prixC;
+	  private int qte; 
+	  
+	  
+	  
+	  
+	  
+}

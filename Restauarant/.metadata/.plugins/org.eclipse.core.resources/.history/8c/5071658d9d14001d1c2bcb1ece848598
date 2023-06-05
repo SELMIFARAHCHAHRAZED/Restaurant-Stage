@@ -1,0 +1,18 @@
+package RestaurantProject.spring.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Reposetory.CommandeRepository;
+
+@RestController
+public class CommandeController {
+
+	@Autowired
+	CommandeRepository comrep; 
+	public Commande addC(Commande c)
+	{
+		return null;
+	}
+}

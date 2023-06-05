@@ -1,0 +1,63 @@
+package RestaurantProject.spring.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Plat;
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Services.PlatServices;
+import RestaurantProject.spring.Services.UtilisateurServices;
+
+@RestController
+public class PlatController {
+	@Autowired
+	PlatServices pr; 
+   @PostMapping("/addplat")
+	public Plat addPlat( @RequestBody Plat p) {
+		  return pr.addPlat(p);
+	}
+   @PostMapping("/addListPlat")
+   public List<Plat> addlistePlat( @RequestBody List<Plat> lp){
+	return pr.addlistePlat(lp);
+}
+   @PostMapping("/addplattestnomp")
+   public String addplatTestNomP( @RequestBody Plat p) {
+	return pr.addPLatTestNomP(p);
+	   
+   }
+   
+   
+   @PostMapping("/updateplat/{idP}")
+   public Plat updatePlat(@RequestBody Plat p,  @PathVariable("idP") Integer idP) {
+	return pr.updatePlat(p, idP);
+   } 
+   
+   @DeleteMapping("/deleteplat")
+   public void deletePlat(@Param("idP") Integer  idP) {
+	   pr.deletePlat(idP);
+   }
+   
+   @GetMapping("/gettallplat")
+   public List<Plat> getAllPlatr(){
+	return pr.getAllPlat();
+   }
+   
+   @GetMapping("/getuserbyprixp/{prixP}")
+   public List<Plat> getPlatByPrixP( @PathVariable Integer prixP ){
+	   return pr.getUserByPrix(prixP);
+   }
+   
+   
+   
+   
+   
+   
+}

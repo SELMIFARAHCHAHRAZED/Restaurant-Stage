@@ -1,0 +1,50 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Reservation;
+import RestaurantProject.spring.Reposetory.ReservationRepository;
+@Service
+public class ReservationServices implements IReservationServices {
+  @Autowired
+  ReservationRepository Service;
+	@Override
+	public Reservation addReservation(Reservation reserv) {
+		// TODO Auto-generated method stub
+		return Service.save(reserv);
+	}
+
+	@Override
+	public List<Reservation> addlisteReservation(List<Reservation> lreserv) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Reservation updateReservation(Reservation reserv, Integer idRe) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteReservation(Integer idRe) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Reservation> getAllReservation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Reservation> getUserByPrix(int nbrPlaces) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

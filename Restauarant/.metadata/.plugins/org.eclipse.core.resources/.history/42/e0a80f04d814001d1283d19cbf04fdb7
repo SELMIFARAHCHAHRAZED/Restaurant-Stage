@@ -1,0 +1,15 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import RestaurantProject.spring.Entities.Reservation;
+
+public interface IReservationServices {
+	public Reservation addReservation(Reservation reserv);
+	public List<Reservation>addlisteReservation(List<Reservation>lreserv);
+    public Reservation updateReservation(Reservation reserv , Integer  idRe);
+    public void deleteReservation(Integer idRe);
+    public List <Reservation> getAllReservation();
+    public List <Reservation> getReserbynbrplacces(int nbrPlaces);
+
+}

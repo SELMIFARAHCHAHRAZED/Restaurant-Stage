@@ -1,0 +1,18 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import RestaurantProject.spring.Entities.Plat;
+
+
+public interface IPlatServices {
+	
+	public Plat addPlat(Plat p);
+	public List<Plat>addlistePlat(List<Plat>lp);
+    public String addPLatTestNomP(Plat p);
+    public Plat updatePlat(Plat p , Integer  idP);
+    public void deletePlat(Integer idP);
+    public List <Plat> getAllPlat();
+    public List <Plat> getUserByPrix(Integer prixP);
+
+}

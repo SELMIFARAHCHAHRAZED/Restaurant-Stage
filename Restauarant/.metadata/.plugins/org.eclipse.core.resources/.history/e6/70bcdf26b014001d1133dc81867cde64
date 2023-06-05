@@ -1,0 +1,127 @@
+package RestaurantProject.spring.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Commande {
+  @Id
+  @GeneratedValue(strategy=GenerationType.IDENTITY)
+  private int idCommande; 
+  private String nomPlat;
+  private String nomU; 
+  private String prenomU; 
+  private int qte; 
+  private String livraison; 
+  private float  prixC;
+  private String modePayement;
+  private String etatC; 
+  public Commande(int idCommande, String nomPlat, String nomU, String prenomU, int qte, String livraison, float prixC,
+		String modePayement, String etatC) {
+	super();
+	this.idCommande = idCommande;
+	this.nomPlat = nomPlat;
+	this.nomU = nomU;
+	this.prenomU = prenomU;
+	this.qte = qte;
+	this.livraison = livraison;
+	this.prixC = prixC;
+	this.modePayement = modePayement;
+	this.etatC = etatC;
+}
+
+
+
+public Commande() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+
+
+
+public int getIdCommande() {
+	return idCommande;
+}
+public void setIdCommande(int idCommande) {
+	this.idCommande = idCommande;
+}
+public String getEtatC() {
+	return etatC;
+}
+public void setEtatC(String etatC) {
+	this.etatC = etatC;
+}
+public String getNomU() {
+	return nomU;
+}
+public void setNomU(String nomU) {
+	this.nomU = nomU;
+}
+public String getPrenomU() {
+	return prenomU;
+}
+public void setPrenomU(String prenomU) {
+	this.prenomU = prenomU;
+}
+public String getLivraison() {
+	return livraison;
+}
+public void setLivraison(String livraison) {
+	this.livraison = livraison;
+}
+public float getPrixC() {
+	return prixC;
+}
+public void setPrixC(float prixC) {
+	this.prixC = prixC;
+}
+
+public String getNomPlat() {
+	return nomPlat;
+}
+
+public void setNomPlat(String nomPlat) {
+	this.nomPlat = nomPlat;
+}
+
+
+public int getQte() {
+	return qte;
+}
+
+
+public void setQte(int qte) {
+	this.qte = qte;
+}
+
+public String getModePayement() {
+	return modePayement;
+}
+
+public void setModePayement(String modePayement) {
+	this.modePayement = modePayement;
+}
+
+
+
+
+@Override
+public String toString() {
+	return "Commande [idCommande=" + idCommande + ", nomPlat=" + nomPlat + ", nomU=" + nomU + ", prenomU=" + prenomU
+			+ ", qte=" + qte + ", livraison=" + livraison + ", prixC=" + prixC + ", modePayement=" + modePayement
+			+ ", etatC=" + etatC + "]";
+}
+
+
+
+
+
+
+
+  
+	
+	
+}

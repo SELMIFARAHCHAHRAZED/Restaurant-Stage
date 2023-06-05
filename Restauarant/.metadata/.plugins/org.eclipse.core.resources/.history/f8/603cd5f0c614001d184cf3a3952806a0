@@ -1,0 +1,86 @@
+package RestaurantProject.spring.Entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Reclam {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+private int  idRec; 
+private String typeRec;
+private String nomU;
+private String prenomU;
+private String emailU;   
+private String DescriptionRec;
+private String etatRec;
+
+
+public Reclam() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Reclam(int idRec, String typeRec, String nomU, String prenomU, String emailU, String descriptionRec,
+		String etatRec) {
+	super();
+	this.idRec = idRec;
+	this.typeRec = typeRec;
+	this.nomU = nomU;
+	this.prenomU = prenomU;
+	this.emailU = emailU;
+	DescriptionRec = descriptionRec;
+	this.etatRec = etatRec;
+}
+public int getIdRec() {
+	return idRec;
+}
+public void setIdRec(int idRec) {
+	this.idRec = idRec;
+}
+public String getTypeRec() {
+	return typeRec;
+}
+public void setTypeRec(String typeRec) {
+	this.typeRec = typeRec;
+}
+public String getNomU() {
+	return nomU;
+}
+public void setNomU(String nomU) {
+	this.nomU = nomU;
+}
+public String getPrenomU() {
+	return prenomU;
+}
+public void setPrenomU(String prenomU) {
+	this.prenomU = prenomU;
+}
+public String getEmailU() {
+	return emailU;
+}
+public void setEmailU(String emailU) {
+	this.emailU = emailU;
+}
+public String getDescriptionRec() {
+	return DescriptionRec;
+}
+public void setDescriptionRec(String descriptionRec) {
+	DescriptionRec = descriptionRec;
+}
+public String getEtatRec() {
+	return etatRec;
+}
+public void setEtatRec(String etatRec) {
+	this.etatRec = etatRec;
+}
+@Override
+public String toString() {
+	return "Reclam [idRec=" + idRec + ", typeRec=" + typeRec + ", nomU=" + nomU + ", prenomU=" + prenomU + ", emailU="
+			+ emailU + ", DescriptionRec=" + DescriptionRec + ", etatRec=" + etatRec + "]";
+}
+
+
+}

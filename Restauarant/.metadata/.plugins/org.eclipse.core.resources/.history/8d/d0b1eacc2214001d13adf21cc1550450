@@ -1,0 +1,28 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Plat;
+import RestaurantProject.spring.Reposetory.PlatRepository;
+
+@Service
+public class PlatServices  implements IPlatServices{
+	@Autowired
+	 PlatRepository pr;
+	@Override
+	public Plat addPlat(Plat p) {
+		
+		return pr.save(p);
+	}
+	@Override
+	public List<Plat> addlistePlat(List<Plat> lp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}

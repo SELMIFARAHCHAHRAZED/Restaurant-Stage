@@ -1,0 +1,44 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Utilisateur;
+import RestaurantProject.spring.Reposetory.UtilisateurRepository;
+@Service
+public class UtilisateurServices implements IUtilisateurServices {
+ @Autowired
+ UtilisateurRepository ur;
+
+@Override
+public Utilisateur addU(Utilisateur u) {
+	// TODO Auto-generated method stub
+	return ur.save(u);
+}
+
+@Override
+public List<Utilisateur> addlisteUser(List<Utilisateur> lu) {
+	// TODO Auto-generated method stub
+	return (List<Utilisateur>) ur.saveAll(lu);
+}
+
+@Override
+public String addUserTestEmail(Utilisateur u) {
+	// TODO Auto-generated method stub
+	String ch="";
+	if( ur.existsByEmail(u.getEmail()))
+	{
+		ch="email est  deja utilisé !!!!";
+	}
+	else {
+		ur.save(u);
+		ch="utilisateur ajoutée";
+	}
+	return ch;
+}
+
+
+	
+}

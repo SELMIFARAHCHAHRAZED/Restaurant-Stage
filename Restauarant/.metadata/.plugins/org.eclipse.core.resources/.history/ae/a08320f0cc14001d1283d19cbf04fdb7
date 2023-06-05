@@ -1,0 +1,18 @@
+package RestaurantProject.spring.Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Reclam;
+import RestaurantProject.spring.Reposetory.ReclamRepository;
+@Service
+public class ReclamServices  implements IReclamServices{
+@Autowired
+ReclamRepository recrep; 
+	@Override
+	public Reclam addReclam(Reclam r) {
+		// TODO Auto-generated method stub
+		return recrep.save(r);
+	}
+
+}

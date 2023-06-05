@@ -1,0 +1,78 @@
+package RestaurantProject.spring.Entities;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+
+public class Reservation {
+@Id
+private  int idRe; 
+private String nomU; 
+private String prenomU;
+private int nbrPlaces;
+private Date dateRe;
+private String nomPlat;
+
+public Reservation() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Reservation(int idRe, String nomU, String prenomU, int nbrPlaces, Date dateRe, String nomPlat) {
+	super();
+	this.idRe = idRe;
+	this.nomU = nomU;
+	this.prenomU = prenomU;
+	this.nbrPlaces = nbrPlaces;
+	this.dateRe = dateRe;
+	this.nomPlat = nomPlat;
+}
+public int getIdRe() {
+	return idRe;
+}
+public void setIdRe(int idRe) {
+	this.idRe = idRe;
+}
+public String getNomU() {
+	return nomU;
+}
+public void setNomU(String nomU) {
+	this.nomU = nomU;
+}
+public String getPrenomU() {
+	return prenomU;
+}
+public void setPrenomU(String prenomU) {
+	this.prenomU = prenomU;
+}
+public int getNbrPlaces() {
+	return nbrPlaces;
+}
+public void setNbrPlaces(int nbrPlaces) {
+	this.nbrPlaces = nbrPlaces;
+}
+public Date getDateRe() {
+	return dateRe;
+}
+public void setDateRe(Date dateRe) {
+	this.dateRe = dateRe;
+}
+public String getNomPlat() {
+	return nomPlat;
+}
+public void setNomPlat(String nomPlat) {
+	this.nomPlat = nomPlat;
+}
+@Override
+public String toString() {
+	return "Reservation [idRe=" + idRe + ", nomU=" + nomU + ", prenomU=" + prenomU + ", nbrPlaces=" + nbrPlaces
+			+ ", dateRe=" + dateRe + ", nomPlat=" + nomPlat + "]";
+} 
+
+
+
+}

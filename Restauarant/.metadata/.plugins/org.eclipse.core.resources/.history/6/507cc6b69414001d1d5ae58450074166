@@ -1,0 +1,66 @@
+package RestaurantProject.spring.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Reposetory.CommandeRepository;
+
+@Service
+public class CommandeServices implements ICommandeServices {
+	@Autowired
+	CommandeRepository comrep;
+
+	@Override
+	public Commande addC(Commande c) {
+		// TODO Auto-generated method stub
+		return comrep.save(c);
+	}
+
+	/*@Override
+	public List<Commande> addlisteCommandes(List<Commande> lc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String addUserTestEmail(Commande u) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Commande updateCommande(Commande c, Integer idC) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteCommande(Integer idC) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Commande> getAllCommande() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Commande> getCommandeByEtat(String ch) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	*/
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,15 @@
+package RestaurantProject.spring.Services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import RestaurantProject.spring.Reposetory.ReclamRepository;
+
+@Service
+public class ReclamServices {
+
+	
+@Autowired
+ReclamRepository Recreep;
+
+}

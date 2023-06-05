@@ -1,0 +1,7 @@
+package RestaurantProject.spring.Services;
+
+import RestaurantProject.spring.Entities.Commande;
+
+public interface ICommandeServices {
+	public Commande addC(Commande c);
+}

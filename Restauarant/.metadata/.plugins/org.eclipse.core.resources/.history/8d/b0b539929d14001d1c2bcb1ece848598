@@ -1,0 +1,11 @@
+package RestaurantProject.spring.Reposetory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import RestaurantProject.spring.Entities.Commande;
+
+
+
+public interface CommandeRepository extends CrudRepository<Commande, Integer> {
+
+}

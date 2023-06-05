@@ -1,0 +1,9 @@
+package RestaurantProject.spring.Reposetory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import RestaurantProject.spring.Entities.Reservation;
+
+public interface ReservationRepository extends  CrudRepository<Reservation, Integer>{
+
+}

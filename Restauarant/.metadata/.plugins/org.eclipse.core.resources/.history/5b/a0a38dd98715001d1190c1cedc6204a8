@@ -1,0 +1,8 @@
+package RestaurantProject.spring.Services;
+
+
+import RestaurantProject.spring.Entities.Employer;
+
+public interface IEmployerServices {
+	public Employer addC(Employer e);
+}

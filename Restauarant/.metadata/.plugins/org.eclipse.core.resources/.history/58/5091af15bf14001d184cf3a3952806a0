@@ -1,0 +1,22 @@
+package RestaurantProject.spring.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import RestaurantProject.spring.Entities.Commande;
+import RestaurantProject.spring.Services.CommandeServices;
+
+@RestController
+public class CommandeController {
+	@Autowired
+	CommandeServices comser;
+	@PostMapping("/addcommande")
+	public Commande addC(@RequestBody Commande c)
+	{
+		return comser.addC(c);
+	}
+	
+
+}
